@@ -1,4 +1,4 @@
-module github.com/go-micro/generator/cmd/protoc-gen-micro
+module github.com/open-micro/generator/cmd/protoc-gen-micro
 
 go 1.19
 
