@@ -15,10 +15,10 @@ import (
 // Paths for packages used by code generated in this file,
 // relative to the import_prefix of the generator.Generator.
 const (
-	apiPkgPath     = "go-micro.dev/v4/api"
+	apiPkgPath     = "go-micro.org/v5/api"
 	contextPkgPath = "context"
-	clientPkgPath  = "go-micro.dev/v4/client"
-	serverPkgPath  = "go-micro.dev/v4/server"
+	clientPkgPath  = "go-micro.org/v5/client"
+	serverPkgPath  = "go-micro.org/v5/server"
 )
 
 func init() {

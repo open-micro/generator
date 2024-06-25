@@ -12,9 +12,9 @@ import (
 
 import (
 	context "context"
-	api "go-micro.dev/v4/api"
-	client "go-micro.dev/v4/client"
-	server "go-micro.dev/v4/server"
+	api "go-micro.org/v5/api"
+	client "go-micro.org/v5/client"
+	server "go-micro.org/v5/server"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -90,6 +90,7 @@ type Greeter_StreamService interface {
 	Context() context.Context
 	SendMsg(interface{}) error
 	RecvMsg(interface{}) error
+	CloseSend() error
 	Close() error
 	Send(*Request) error
 	Recv() (*Response, error)
@@ -97,6 +98,10 @@ type Greeter_StreamService interface {
 
 type greeterServiceStream struct {
 	stream client.Stream
+}
+
+func (x *greeterServiceStream) CloseSend() error {
+	return x.stream.CloseSend()
 }
 
 func (x *greeterServiceStream) Close() error {

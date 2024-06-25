@@ -10,7 +10,7 @@ Then install `protoc-gen-go` and `protoc-gen-micro`.
 
 ```
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
-go install github.com/go-micro/generator/cmd/protoc-gen-micro@latest
+go install github.com/open-micro/generator/cmd/protoc-gen-micro@latest
 ```
 
 Also required: 
